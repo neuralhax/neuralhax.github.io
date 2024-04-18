@@ -161,7 +161,7 @@ logon_server WINDEV2210EVAL
 As expected, no WDigest passwords. Now we try to set `UseLogonCredential` to 2.
 
 ```ps1
-UseLogonCredential /t REG_DWORD /d 2
+PS C:\Windows\system32> reg add HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest /v UseLogonCredential /t REG_DWORD /d 2
 The operation completed successfully.
 PS C:\Windows\system32> reg query HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest
 
